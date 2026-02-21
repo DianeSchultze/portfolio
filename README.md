@@ -1,2 +1,2 @@
 # Portfolio
-all pages under construction 
+here's my on going portfolio - all pages are under construction

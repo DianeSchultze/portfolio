@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&display=swap');
+
+:root {
+    --cream: #FFFDEC;
+    --red: #A40000;
+    --cream-vanilla: #EFE6DE;
+    --cherry-cola: #9A0002;
+    --milano-red: #BB080B;
+    --cararra: #F0EDE8;
+    --vintage-rouge: #D52122;
+    --redd: #c11214;
+
+    --rouded-sm: 8px;
+    --rounded-md: 12px;
+    --rounded-full: 32px;
+
+    --mobile-small-text: 0.7rem;
+    --mobile-h1: 5rem;
+
+    --tablet-h1: 9rem;
+
+    --desktop-h1: 13rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    background: var(--cream);
+    background-image: linear-gradient(#dadada53 .1em, transparent .1em), linear-gradient(90deg, #dadada53 .1em, transparent .1em);
+    background-size: 3em 3em;
+
+    font-family: "Gluten", cursive;;
+    color: var(--red);
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+h1 {
+    font-weight: 500;
+    line-height: 0.8;
+    letter-spacing: -5px;
+    font-size: 5rem;
+}
+
+span {
+    display: block;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    top: 0;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+li a {
+    font-size: 0.7rem;
+    text-decoration: none;
+    color: var(--cream);
+}
+
+.tab {
+    padding: 14px;
+    width: 100%;
+    height: 6vh;
+    border-radius: 0 0 12px 12px;
+    transition: height 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 3px 3px 10px #00000033;
+
+    display: flex;
+    align-items: center; 
+   /* vertical center */
+    justify-content: center;
+}
+
+.projects { background: var(--cherry-cola)}
+.about { background: var(--milano-red) } 
+.home { background: var(--vintage-rouge) } 
+.connect { background: var(--redd) } 
+
+.tab:hover {
+    height: 10vh;
+    box-shadow: 5px 5px 15px #3b17174d;
+}
+
+.tab:active{
+    box-shadow: inset 1px black;
+}
+
+.typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid currentColor; /* cursor */
+
+    animation:
+        typing 5s steps(31, end),
+        blink 0.7s step-end infinite;
+}
+
+#typing-text {
+    border-right: 3px solid currentColor;
+    padding-right: 4px;
+    white-space: nowrap;
+}
+
+/* number of characters = 31 (including spaces & period) */
+@keyframes typing {
+    from { width: 0; }
+    to   { width: 31ch; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@media (min-width: 769px) {
+    h1 {
+        font-size: var(--tablet-h1);
+    }
+}
+
+@media (min-width: 1000px) {
+    h1 {
+        font-size: var(--desktop-h1);
+    }
+    
+}
